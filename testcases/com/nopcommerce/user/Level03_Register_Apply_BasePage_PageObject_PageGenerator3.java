@@ -115,7 +115,7 @@ public class Level03_Register_Apply_BasePage_PageObject_PageGenerator3 extends B
 //		homePage = new HomePageObject(driver);
 		 
 		System.out.println("Register_03 - Step 05: Click to Logout button");
-		homePage = registerPage.clickToLogoutButton();
+		homePage = registerPage.clickToLogoutLink();
 		
 	}
 	

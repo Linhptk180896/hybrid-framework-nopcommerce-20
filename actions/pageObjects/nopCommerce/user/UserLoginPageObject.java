@@ -37,7 +37,7 @@ public void inputToPasswordTextbox(String password) {
 public UserHomePageObject clickToLoginButton() {
 	waitForElementClickable(driver, UserLoginPageUI.LOGIN_BUTTON);
 	clickToElement(driver, UserLoginPageUI.LOGIN_BUTTON);
-	return new UserHomePageObject(driver);
+	return PageGeneratorManager.getHomePage(driver);
 }			
  
 public UserHomePageObject LoginAsUser(String validEmail, String password) {

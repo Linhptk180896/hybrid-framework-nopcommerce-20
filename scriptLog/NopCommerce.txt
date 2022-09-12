@@ -1,0 +1,25 @@
+[INFO ] [2022-09-08 01:51:44,389] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-09-08 01:51:45,136] Register - Step 02: Select Gender with value = Female
+[INFO ] [2022-09-08 01:51:45,281] Register - Step 02: Enter to First Name Textbox with value = Automation
+[INFO ] [2022-09-08 01:51:45,430] Register - Step 03: Enter to Last Name Textbox with value = FC
+[INFO ] [2022-09-08 01:51:45,553] Register - Step 03.1: Select Date of birth with Date value = 18
+[INFO ] [2022-09-08 01:51:46,366] Register - Step 03.2: Select Date of birth with Month value = August
+[INFO ] [2022-09-08 01:51:47,174] Register - Step 03.3: Select Date of birth with Year value = 1996
+[INFO ] [2022-09-08 01:51:49,484] Register - Step 04: Enter to  Email Textbox with value = afc219@gmail.com
+[INFO ] [2022-09-08 01:51:49,640] Register - Step 05: Select checkbox Newsletter 
+[INFO ] [2022-09-08 01:51:49,702] Register - Step 05: Enter to password Textbox with value = 123456
+[INFO ] [2022-09-08 01:51:49,862] Register - Step 06: Enter to confirm password  Textbox with value = 123456
+[INFO ] [2022-09-08 01:51:50,026] Register - Step 07: Click To Register Button
+[INFO ] [2022-09-08 01:51:50,911] Register - Step 08: Verify register success message is displyed
+[INFO ] [2022-09-08 01:51:50,978]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-09-08 01:51:50,978] Register - Step 09: Click to logout link
+[INFO ] [2022-09-08 01:51:51,938] Login - Step 01: Navigate to open login page
+[INFO ] [2022-09-08 01:51:52,418] Login - Step 02: Enter to Email Textbox with value = afc219@gmail.com
+[INFO ] [2022-09-08 01:51:52,531] Login - Step 03: Enter to Password Textbox with value = 123456
+[INFO ] [2022-09-08 01:51:52,667] Login - Step 04: Click on Login Button 
+[INFO ] [2022-09-08 01:51:53,437] Login - Step 05: Verify My Account Link is displayed
+[INFO ] [2022-09-08 01:51:53,501]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-09-08 01:51:53,501] Login - Step 06: Navigate to my account page
+[INFO ] [2022-09-08 01:51:54,130] Login - Step 07: Verify CustomerInfoPage is Displayed
+[INFO ] [2022-09-08 01:51:54,207]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-09-08 01:51:54,221] My Account - Step 01: Verify FirstName value is correct

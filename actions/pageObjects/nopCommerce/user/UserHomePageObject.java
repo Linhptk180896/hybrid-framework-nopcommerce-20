@@ -17,6 +17,8 @@ public class UserHomePageObject extends BasePage {
 		this.driver = driver;
 	}
 	
+	
+//	@Step("Navigate to Register page")
 	public UserRegisterPageObject openRegisterPage() {
 	System.out.println("Driver at Wait element: " + driver.toString());
 	waitForElementClickable(driver, UserHomePageUI.REGISTER_LINK);
@@ -27,17 +29,27 @@ public class UserHomePageObject extends BasePage {
 	//Nếu biến EMAIL_TEXTBOX không là static thì phải khởi tạo new HomePageUI() hoặc extends HomePageUI thì mới truy cập đc
 	}
 
+	
+//	@Step("Navigate to Login page")
+
 	public UserLoginPageObject openLoginPage() {
 		waitForElementClickable(driver, UserHomePageUI.LOGIN_LINK);
 		clickToElement(driver, UserHomePageUI.LOGIN_LINK);
 		return PageGeneratorManager.getLoginPage(driver);
 	}
 
+//	@Step("Navigate to my account page")
+	
+	
+
 	public boolean isMyAccountLinkDisplayed() {
 		waitForElementVisible(driver, UserHomePageUI.MY_ACCOUNT_LINK);
 		return isElementDisplayed(driver, UserHomePageUI.MY_ACCOUNT_LINK);
 		 
 	}
+
+	
+//	@Step("Verify 'MyAccount' link is displayed ")
 
 	public UserCustomerInfoPageObject openMyAccountPage() {
 		waitForElementClickable(driver, UserHomePageUI.MY_ACCOUNT_LINK);

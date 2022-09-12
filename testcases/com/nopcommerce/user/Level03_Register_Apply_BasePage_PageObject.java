@@ -113,7 +113,7 @@ public class Level03_Register_Apply_BasePage_PageObject extends BasePage{
 	
 		 
 		System.out.println("Register_03 - Step 05: Click to Logout button");
-		registerPage.clickToLogoutButton();
+		registerPage.clickToLogoutLink();
 		
 	}
 	

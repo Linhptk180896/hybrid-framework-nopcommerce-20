@@ -81,7 +81,7 @@ public class Level03_Login_Apply_BasePage_PageObject_MultiBrowser_PageGenerator3
 	
 		 
 		System.out.println("Pre-Condition - Step 05: Click to Logout button");
-		registerPage.clickToLogoutButton();
+		registerPage.clickToLogoutLink();
 		//Sau khi click logOutBtn thì business sẽ về HomePageObject vì thế new HomePageObject lên
 		//Đoạn new này bị lặp nhưng sẽ tối ưu ở những bài sau
 //		homePage = new HomePageObject(driver);

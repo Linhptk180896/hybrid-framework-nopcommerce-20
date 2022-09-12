@@ -88,7 +88,7 @@ public class Level07_Switch_Page extends BaseTest{
 	
 		 
 		System.out.println("Pre-Condition - Step 05: Click to Logout button");
-		registerPage.clickToLogoutButton();
+		registerPage.clickToLogoutLink();
 		//Sau khi click logOutBtn thì business sẽ về HomePageObject vì thế new HomePageObject lên
 		//Đoạn new này bị lặp nhưng sẽ tối ưu ở những bài sau
 //		homePage = new HomePageObject(driver);

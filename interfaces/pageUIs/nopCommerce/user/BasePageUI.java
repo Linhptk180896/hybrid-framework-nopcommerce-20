@@ -9,4 +9,13 @@ public class BasePageUI {
 	public static final String LOGOUT_LINK_AT_USER = "css=a[class='ico-logout']";
 	public static final String LOGOUT_LINK_AT_ADMIN = "xpath=//a[text()='Logout']";
 	public final static String INPUT_UPLOAD_FILE = "xpath=//input[@type='file']";
+	
+	//Pattern Object
+	public final static String DYNAMIC_TEXTBOX_BY_ID = "xpath=//input[@id='%s']";
+	public final static String DYNAMIC_BUTTON_BY_TEXT = "xpath=//button[contains(text(),'%s')]";
+	public final static String DYNAMIC_DROPDOWN_BY_NAME = "xpath=//select[@name='%s']";
+	public final static String DYNAMIC_CHILD_LOCATOR_TYPE_BY_NAME = "xpath=//select[@name='%s']//option";
+	public final static String DYNAMIC_RADIO_BUTTON_BY_TEXT = "xpath=//label[text()='%s']//preceding-sibling::input";
+	public final static String DYNAMIC_CHECKBOX_BY_LABEL = "xpath=//label[contains(text(),'%s')]//following-sibling::input";
+	
 }
