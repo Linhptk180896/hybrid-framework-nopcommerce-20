@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite parallel="false" name="NopCommerce">
+
+<suite parallel="false" name="WordPressUser">
 
 
 <listeners>
@@ -9,7 +10,8 @@
 
   <test name="Run on Chrome">	
 	<parameter name="browser" value="chrome"></parameter>
-	<parameter name="appUrl" value="https://www.facebook.com/"></parameter>
+	<parameter name="userUrl" value="https://localhost/linhptk/wp-admin/"></parameter>
+	<parameter name="adminUrl" value="https://localhost/linhptk/"></parameter>
     <classes>
       <class name="com.facebook.register.Topic12_Element_Undisplayed"/>
     </classes>

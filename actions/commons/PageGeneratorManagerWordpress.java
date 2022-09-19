@@ -1,0 +1,32 @@
+package commons;
+
+import org.openqa.selenium.WebDriver;
+
+import pageObject.wordpress.admin.AdminAddNewPostPageObject;
+import pageObject.wordpress.admin.AdminDashboardPageObject;
+import pageObject.wordpress.admin.AdminLoginPageObject;
+import pageObject.wordpress.admin.AdminSearchPostPageObject;
+
+public class PageGeneratorManagerWordpress {
+	public static AdminLoginPageObject getAdminLoginPage(WebDriver driver) {
+		return new AdminLoginPageObject(driver);
+	}
+
+	public static AdminDashboardPageObject getAdminDashboardPage(WebDriver driver) {
+		return new AdminDashboardPageObject(driver);
+	}
+
+	public static AdminSearchPostPageObject getAdminSearchPostPage(WebDriver driver) {
+		return new AdminSearchPostPageObject(driver);
+	}
+
+	public static AdminAddNewPostPageObject getAdminAddNewPostPage(
+	WebDriver driver) {
+		return new AdminAddNewPostPageObject(driver);
+	}
+
+
+	
+	
+
+}

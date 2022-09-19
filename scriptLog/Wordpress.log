@@ -1,0 +1,30 @@
+[INFO ] [2022-09-18 14:38:24,831] Pre-Condition - Step 01: Open browser and navigate to Admin login page 
+[INFO ] [2022-09-18 14:38:30,805] Pre-Condition - Step 02: Enter Email linhptk
+[INFO ] [2022-09-18 14:38:31,089] Pre-Condition - Step 03: Enter Email Linh1808/
+[INFO ] [2022-09-18 14:38:31,368] Pre-Conditon - Step 04: Click on btn Login and navigate to Admin Dashboard Page
+[INFO ] [2022-09-18 14:38:36,369] Step: 01: click on Post menu and navigate to Admin Search Post Page 
+[INFO ] [2022-09-18 14:38:38,265] Step 02: Get Admin Search Post Url
+[INFO ] [2022-09-18 14:38:38,274] Step 02: click on Add new  button and navigate to Admin New Post Page 
+[INFO ] [2022-09-18 14:38:41,793] Step 05: Send key to Post title
+[INFO ] [2022-09-18 14:38:42,547] Step 06: Send key to Post body
+[INFO ] [2022-09-18 14:38:43,689] Step 07: Click on Pre-Publish button
+[INFO ] [2022-09-18 14:38:44,045] Step 08: Click on Publish button
+[INFO ] [2022-09-18 14:38:44,621] Step 09: Verify Post Published message is displayed
+[INFO ] [2022-09-18 14:38:47,942]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-09-18 14:38:48,130] Step 01: Open Admin Search Post Page 
+[INFO ] [2022-09-18 14:38:51,055] Step 02: Verify New published post is displayed 
+[INFO ] [2022-09-18 14:42:29,542] Pre-Condition - Step 01: Open browser and navigate to Admin login page 
+[INFO ] [2022-09-18 14:42:35,337] Pre-Condition - Step 02: Enter Email linhptk
+[INFO ] [2022-09-18 14:42:35,716] Pre-Condition - Step 03: Enter Email Linh1808/
+[INFO ] [2022-09-18 14:42:36,003] Pre-Conditon - Step 04: Click on btn Login and navigate to Admin Dashboard Page
+[INFO ] [2022-09-18 14:42:40,833] Step: 01: click on Post menu and navigate to Admin Search Post Page 
+[INFO ] [2022-09-18 14:42:43,231] Step 02: Get Admin Search Post Url
+[INFO ] [2022-09-18 14:42:43,240] Step 02: click on Add new  button and navigate to Admin New Post Page 
+[INFO ] [2022-09-18 14:42:47,254] Step 05: Send key to Post title
+[INFO ] [2022-09-18 14:42:48,086] Step 06: Send key to Post body
+[INFO ] [2022-09-18 14:42:49,418] Step 07: Click on Pre-Publish button
+[INFO ] [2022-09-18 14:42:50,149] Step 08: Click on Publish button
+[INFO ] [2022-09-18 14:42:50,401] Step 09: Verify Post Published message is displayed
+[INFO ] [2022-09-18 14:42:53,946]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-09-18 14:42:54,137] Step 01: Open Admin Search Post Page 
+[INFO ] [2022-09-18 14:42:56,152] Step 02: Verify New published post is displayed 
