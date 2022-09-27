@@ -226,7 +226,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTestWordPress{
 	
 	@Test
 	public void Post_04_Delete_Post() {
-		//cmt
+		//cmt ,
 		log.info("Post03 - Step 01: Open Admin Url");
 		adminDashboardPage = userPostDetailPage.openAdminDashboardPage(driver, adminUrl);
 		
