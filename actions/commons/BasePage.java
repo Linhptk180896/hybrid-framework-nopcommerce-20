@@ -11,6 +11,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -21,6 +22,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObject.wordpress.admin.AdminDashboardPageObject;
+import pageObject.wordpress.admin.AdminSearchPostPageObject;
 import pageObjects.jQueryUploadFiles.HomePageUploadFileObject;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
@@ -204,6 +207,16 @@ public class BasePage {
 		element.clear();
 		element.sendKeys(textValue);
 	}
+	
+	public void clearValueInDynamicTextboxByPressKey(WebDriver driver, String locatorType, String textValue, String... dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+		element.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+	}
+	
+	public void clearValueInTextboxByPressKey(WebDriver driver, String locatorType, String textValue) {
+		WebElement element = getWebElement(driver, locatorType);
+		element.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+	}
 
 	public String getElementText(WebDriver driver, String locatorType) {
 		return getWebElement(driver, locatorType).getText();
@@ -219,8 +232,7 @@ public class BasePage {
 
 	}
 
-	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem,
-			String... dynamicValues) {
+	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem, String... dynamicValues) {
 		Select select = new Select(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)));
 		select.selectByVisibleText(textItem);
 
@@ -731,4 +743,16 @@ public class BasePage {
 		return getElementAttribute(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, attributeName, textboxID);
 		
 	}
+
+	public pageObject.wordpress.user.UserHomePageObject openUserHomePage(WebDriver driver, String pageUrl) {
+		getUrl(driver, pageUrl);
+		return PageGeneratorManagerWordpress.getUserHomePage(driver);
+	}
+	
+	public AdminDashboardPageObject openAdminDashboardPage(WebDriver driver, String adminUrl) {
+		getUrl(driver, adminUrl);
+		return PageGeneratorManagerWordpress.getAdminDashboardPage(driver);
+	}
+	
+
 }

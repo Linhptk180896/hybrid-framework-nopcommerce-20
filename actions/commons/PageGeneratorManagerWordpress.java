@@ -6,6 +6,8 @@ import pageObject.wordpress.admin.AdminAddNewPostPageObject;
 import pageObject.wordpress.admin.AdminDashboardPageObject;
 import pageObject.wordpress.admin.AdminLoginPageObject;
 import pageObject.wordpress.admin.AdminSearchPostPageObject;
+import pageObject.wordpress.user.UserHomePageObject;
+import pageObject.wordpress.user.UserPostDetailPageObject;
 
 public class PageGeneratorManagerWordpress {
 	public static AdminLoginPageObject getAdminLoginPage(WebDriver driver) {
@@ -23,6 +25,13 @@ public class PageGeneratorManagerWordpress {
 	public static AdminAddNewPostPageObject getAdminAddNewPostPage(
 	WebDriver driver) {
 		return new AdminAddNewPostPageObject(driver);
+	}
+
+	public static UserHomePageObject getUserHomePage(WebDriver driver) {
+		return new UserHomePageObject(driver);
+	}
+	public static UserPostDetailPageObject getUserPostDetailPage(WebDriver driver) {
+		return new UserPostDetailPageObject(driver);
 	}
 
 

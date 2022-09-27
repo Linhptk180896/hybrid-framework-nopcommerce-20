@@ -15,6 +15,7 @@
  <package name="com.wordpress.posts"></package>
  </packages>
  </test> 
+ 
 <!--
 <parameter name="adminUrl" value="https://localhost/linhptk/wp-admin/"></parameter>
   <parameter name="userUrl" value="https://localhost/linhptk/"></parameter>

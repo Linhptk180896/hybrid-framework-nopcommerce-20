@@ -28,9 +28,9 @@ public class AdminAddNewPostPageObject  extends BasePage{
 		sendKeyToElement(driver, AdminAddPostPageUI.POST_BODY_AFRER_CLICK, postBody);		
 	}
 
-	public void clickOnPrePublishButton() {
-		waitForElementClickable(driver, AdminAddPostPageUI.PRE_PUBLISH_BUTTON);
-		clickToElement(driver, AdminAddPostPageUI.PRE_PUBLISH_BUTTON);
+	public void clickOnPrePublishButton(String buttonName) {
+		waitForElementClickable(driver, AdminAddPostPageUI.PRE_PUBLISH_OR_UPDATE_BUTTON, buttonName);
+		clickToElement(driver, AdminAddPostPageUI.PRE_PUBLISH_OR_UPDATE_BUTTON, buttonName);
 	}
 
 	public void clickOnPublishButton() {
@@ -38,14 +38,36 @@ public class AdminAddNewPostPageObject  extends BasePage{
 		clickToElement(driver, AdminAddPostPageUI.PUBLISH_BUTTON);		
 	}
 
-	public boolean isPostPublishedMessageDisplayed() {
-		waitForElementVisible(driver, AdminAddPostPageUI.POST_PUBLISHED_MESSAGE);
-		return isElementDisplayed(driver, AdminAddPostPageUI.POST_PUBLISHED_MESSAGE);
+	public boolean isPostPublishedMessageDisplayed(String actionText) {
+		waitForElementVisible(driver, AdminAddPostPageUI.POST_PUBLISHED_OR_UPDTED_MESSAGE,actionText);
+		return isElementDisplayed(driver, AdminAddPostPageUI.POST_PUBLISHED_OR_UPDTED_MESSAGE,actionText);
 	}
-
+	
 	public AdminSearchPostPageObject openSearchPostPageUrl(String adminSearchPostUrl) {
 		getUrl(driver, adminSearchPostUrl);
 		return PageGeneratorManagerWordpress.getAdminSearchPostPage(driver);
 	}
+
+	public void enterToAddNewPostTitle(String editPostTitle) {
+		waitForElementVisible(driver, AdminAddPostPageUI.POST_TITLE);
+		sendKeyToElement(driver, AdminAddPostPageUI.POST_TITLE, editPostTitle);
+	}
+
+	public void enterToAddNewPostBody(String editPostBody) {
+		waitForElementVisible(driver, AdminAddPostPageUI.POST_BODY_AFRER_CLICK);
+	clearValueInTextboxByPressKey(driver, AdminAddPostPageUI.POST_BODY_AFRER_CLICK, editPostBody);
+		sendKeyToElement(driver, AdminAddPostPageUI.POST_BODY_AFRER_CLICK, editPostBody);
+	}
+
+	public void clickOnUpdateButton(String buttonName) {
+		waitForElementClickable(driver, AdminAddPostPageUI.PRE_PUBLISH_OR_UPDATE_BUTTON, buttonName);
+		clickToElement(driver, AdminAddPostPageUI.PRE_PUBLISH_OR_UPDATE_BUTTON, buttonName);
+	}
+
+	public void isUpdatedPostMessageIsDisplayed(String actionText) {
+		waitForElementVisible(driver, AdminAddPostPageUI.POST_PUBLISHED_OR_UPDTED_MESSAGE, actionText);
+		waitForElementVisible(driver, AdminAddPostPageUI.POST_PUBLISHED_OR_UPDTED_MESSAGE, actionText);
+	}
+
 
 }
