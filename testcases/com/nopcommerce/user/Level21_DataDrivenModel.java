@@ -58,6 +58,11 @@ public class Level21_DataDrivenModel extends BaseTest{
 //		basePage = new BasePage(); --> kế thừa BasePage rồi nên không cần khởi tạo
 		homePage = PageGeneratorManager.getHomePage(driver);
 		
+		System.out.println(userData.getSubjects().get(0).getName());
+		System.out.println(userData.getSubjects().get(0).getPoint());
+		System.out.println(userData.getSubjects().get(1).getName());
+		System.out.println(userData.getSubjects().get(1
+				).getPoint());
 	  }
 	
 	
