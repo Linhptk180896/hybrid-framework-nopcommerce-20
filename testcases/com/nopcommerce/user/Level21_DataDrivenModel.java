@@ -32,7 +32,7 @@ public class Level21_DataDrivenModel extends BaseTest{
 	String firstName, lastName, password, wrongPassword, date, month, year, gender;
 	
 	
-	@Parameters("browser")
+	@Parameters("browserName")
 	@BeforeClass
 	  public void beforeClass(String browserName) {
 		//Chạy vào hàm getBrowser ở baseTest rồi nhưng biến driver của class  Level03_Login_Apply_BasePage_PageObject_MultiBrowser chưa 
