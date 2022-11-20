@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="false" name="Chrome">
 
 
+	<test name="Run on Chrome">
+		<parameter name="browserName" value="chrome"></parameter>
 
-
-  <test name="Run on Chrome">	
-	<parameter name="browserName" value="chrome"></parameter>
-	
-    <classes>
-      <class name="com.nopcommerce.user.Level21_DataDrivenModel"/>
-    </classes>
-  </test> 
+		<classes>
+			<class name="com.nopcommerce.user.Level21_DataDrivenModel" />
+		</classes>
+	</test>
 </suite> 

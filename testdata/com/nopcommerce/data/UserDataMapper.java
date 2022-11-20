@@ -1,16 +1,21 @@
 package com.nopcommerce.data;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
+
+import org.openqa.selenium.WebDriver;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import commons.GlobalConstans;
+	
+
 
 public class UserDataMapper {
+
+
 @JsonProperty("firstname") //Dùng key của file json
 private String firstName;
 
@@ -49,7 +54,7 @@ public static UserDataMapper getUserData() {
 	try { 
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-		return mapper.readValue(new File(GlobalConstans.PROJECT_PATH + "resources/Data.json"), UserDataMapper.class);
+		return mapper.readValue(new File(GlobalConstans.PROJECT_PATH + "/resources/Data.json"), UserDataMapper.class);
 	} catch (Exception e) {
 		
 		e.printStackTrace();

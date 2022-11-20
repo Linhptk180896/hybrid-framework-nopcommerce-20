@@ -29,10 +29,10 @@ public class Level21_DataDrivenModel extends BaseTest{
 	private UserCustomerInfoPageObject customerInfoPage;
 
 	private UserDataMapper userData;
-	String firstName, lastName, password, wrongPassword, date, month, year, gender;
+	String firstName, lastName, password, wrongPassword, date, month, year, gender, point;
 	
 	
-	@Parameters("browserName")
+	@Parameters({"browserName"})
 	@BeforeClass
 	  public void beforeClass(String browserName) {
 		//Chạy vào hàm getBrowser ở baseTest rồi nhưng biến driver của class  Level03_Login_Apply_BasePage_PageObject_MultiBrowser chưa 
@@ -43,7 +43,8 @@ public class Level21_DataDrivenModel extends BaseTest{
 		homePage = PageGeneratorManager.getHomePage(driver);
 		userData = UserDataMapper.getUserData();// khởi tạo hàm map với file json lên 
 		
-		firstName = userData.getFirstName();
+//		firstName = userData.getFirstName();
+		firstName = userData.getSubjects().get(0).getName();
 		lastName = userData.getLastName();
 		password = userData.getPassword();
 		email = userData.getEmailAddress() + getRandomNumber() + "@gmail.com";
@@ -58,11 +59,10 @@ public class Level21_DataDrivenModel extends BaseTest{
 //		basePage = new BasePage(); --> kế thừa BasePage rồi nên không cần khởi tạo
 		homePage = PageGeneratorManager.getHomePage(driver);
 		
-		System.out.println(userData.getSubjects().get(0).getName());
-		System.out.println(userData.getSubjects().get(0).getPoint());
-		System.out.println(userData.getSubjects().get(1).getName());
-		System.out.println(userData.getSubjects().get(1
-				).getPoint());
+//		System.out.println(userData.getSubjects().get(0).getName());
+//		System.out.println(userData.getSubjects().get(0).getPoint());
+//		System.out.println(userData.getSubjects().get(1).getName());
+//		System.out.println(userData.getSubjects().get(1).getPoint());
 	  }
 	
 	
@@ -74,6 +74,7 @@ public class Level21_DataDrivenModel extends BaseTest{
 		log.info("Register - Step 02: Select Gender with value = " + gender);
 		registerPage.checkToRadioButtonByText(driver, gender);
 		
+//		log.info("Register - Step 02: Enter to First Name Textbox with value = " + userData.getFirstName());
 		log.info("Register - Step 02: Enter to First Name Textbox with value = " + firstName);
 //		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToTextboxByID(driver, firstName, "FirstName");

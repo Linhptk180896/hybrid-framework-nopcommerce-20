@@ -27,7 +27,7 @@ public class BaseTest {
 	private WebDriver driver;
 	//Public log này là final để không được gán lai
 	protected final Log log;
-	private 	String projectPath = System.getProperty("user.dir");
+	private 	String projectPath = System.getProperty("user.dir"); 
 //--> BaseTest sẽ bổ trợ cho toàn bộ packages của các source folders
 	
 	@BeforeSuite
